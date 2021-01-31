@@ -1,0 +1,460 @@
+* {box-sizing:border-box}
+/* ------------ */
+/* Navigation Bar CSS*/
+/* ------------ */
+body {
+  margin: 0;
+  background-color: #5D5C61;
+  font-weight: 300;
+}
+
+.table{
+  align-self:left;
+  margin: 0 auto;
+  @media screen and (min-width: 800px) {
+    table {
+    width: 90%;}
+  }
+  table-layout: auto;
+  
+  @media screen and (min-width: 1000px) {
+    table {
+    width: 80%;}
+  }
+  
+}
+
+
+.nav-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  
+  background: #557A95
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 5px 0;
+  width: 4em;
+  height: 4em;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 30px;
+  padding-top: 1.5em;
+  
+}
+
+nav a {
+  text-decoration: none;
+  position: relative;
+  color:gold;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+nav a.active-page{
+  color: black;
+  font-weight: bolder;
+}
+
+nav a:hover{
+  color: white;
+}
+
+nav a:hover::before{
+  width: 100%;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #5D5C61;
+  width: 0%;
+  transition: all ease-in-out 300ms;
+}
+
+/* ------------ */
+/* Info CSS */
+/* ------------ */
+.info-pics {
+  overflow: scroll;
+  float:left;
+  width: 60%;
+  height: 75%;
+}
+
+.info-vids {
+  float:right;
+  height:75%;
+  width:40%;
+}
+
+.info-vids ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.info-media{
+  text-align:center;
+}
+
+
+/* ------------ */
+/* Home & */
+/* Slideshow CSS */
+/* Major Assistance from the tutorials at the link below. Could not make it pretty without
+its help - ttps://www.w3schools.com/bootstrap/bootstrap_carousel.asp */ 
+/* ------------ */
+.personalcontainer{
+  padding-top:10em;
+  max-width: 1000px;
+  height: auto;
+  position: relative;
+  margin: auto;
+  display: flex;
+}
+
+
+.slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.pictures {
+  display: none;
+}
+
+/* Caption text */
+.hover {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.pictures:hover .hover {
+  opacity: 1;
+}
+
+
+.pictext a{
+  color: white;
+  text-decoration:none;
+}
+
+.pictext {
+  mix-blend-mode: screen;
+  text-decoration: none;
+  position: relative;
+  color:red;
+  font-size: 45px;
+  text-shadow: 1px 0 0;
+  left:50%;
+  width:40%;
+  bottom:20%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+.copyright{
+  font-size:12px;
+  color:white;
+
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Warcraft Recruitment CSS */
+.closed {
+  max-width: 10%;
+  opacity: 0.4;
+}
+
+.special{
+  border: 10px gold;
+  border-radius: 6px;
+}
+
+.wowrecruitcontainer {
+  margin: auto;
+  width: 50%;
+
+}
+.recruitment td{
+  text-align:center;
+  vertical-align:middle;
+}
+
+
+.recruitment .classtext{
+  mix-blend-mode: screen;
+  font-weight: 3000px;
+  font-size: 1vw;
+}
+
+
+/* Recruitment Page CSS */
+.contacttop{
+  display:block;
+  margin: auto;
+}
+
+.siderecruit {
+  position:relative;
+  display: flex;
+  width: 100%;
+  
+}
+
+.recruittext{
+  display:block;
+  mix-blend-mode: screen;
+  font-weight:bolder;
+  color:white;
+  font-size: 1vw;
+}
+
+.oasiscontainer .recruittext{
+  width:1000x;
+}
+
+.siderecruit .warcraftcontainer .hovertext {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.siderecruit .oasiscontainer .hovertext {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.siderecruit .oasiscontainer:hover .hovertext{
+  opacity: 1;
+}
+
+.siderecruit .warcraftcontainer:hover .hovertext{
+  opacity: 1;
+}
+
+
+.siderecruit .text{
+  background: (0, 0, 0, 0.0);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.8), 0px 0px 2px  rgba(0,0,0,1);
+  font: black;
+  padding: 16px 32px;
+  font-size: 16px;
+}
+
+.siderecruit .warcraft{
+  width:  100%;
+  height: 100%;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+
+}
+
+.siderecruit .oasis{
+  width:  100%;
+  height: 100%;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.siderecruit .cols {
+  flex: 50%;
+}
+
+.transparent {
+  opacity:0.3;
+}
+
+.nottransparent{
+  opacity:1;
+}
+/* 404 CSS */
+
+
+
+.chaos .first{
+  overflow:hidden;
+  float:left;
+}
+
+.chaos .second{
+  overflow:hidden;
+  float:left;
+}
+
+.gameheader {
+  font-size: 35px;
+  font-weight: bolder;
+  Color: white;
+}
+
+.chaos {
+  float:left;
+  width:30%;
+}
+
+.gamecontainer{
+  overflow:hidden;
+  float:left
+}
+
+/* Contact CSS */
+input[type=text], select, textarea{
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+input[type=submit] {
+  background-color: Grey;
+  color: white;
+  padding: 8px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=reset] {
+  background-color: Grey;
+  color: white;
+  padding: 8px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+.contact-container {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+  width: 50%;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#messagebox {
+  top:460px;
+  padding: 0 0 115;
+  width:100%;
+  height: 150px; 
+  line-height: 15px;
+}

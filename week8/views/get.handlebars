@@ -1,0 +1,18 @@
+<h1>GET Request Received</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each arrayForTable}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.value}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+
+</table>

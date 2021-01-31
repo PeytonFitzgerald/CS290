@@ -1,0 +1,46 @@
+<header>
+    <div class="nav-container">
+        <img src ="assets/tabularasa.jpg" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a class='home' href="/">Home</a></li>
+                <li><a class="info" href="/info">Tabula Rasa Info</a></li>
+                <li><a class="recruit" href="/recruitment">Tabula Rasa Recruitment</a></li>
+                <li><a class='active-page' href="/contact">Tabula Rasa Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div id="contacttop"><img src ="assets/otherTR.png" alt="logo" class="guildlogo"></div>
+<div class="contact-container">
+    <form action="/contactus", autocomplete="off", name='contactguild', id='contactguild', method='post'>
+        <fieldset>
+            <Legend>Guild Contact Form</Legend>
+            Name:<br>
+            <input type="text" name="name"><br>
+            Subject<br>
+            <input type="text" name="references"><br>
+            E-mail<br>
+            <input type="text" name="email"><br>
+            What game are you contacting us about? If the game isn't found, please describe it in the 'other' section <br>
+            <select id="games" name="gameslist">
+                <option value="wow">World of Warcraft</option>
+                <option value="valorant">Valorant</option>
+                <option value="oasis">Last Oasis</option>
+                <option value="hots">Heroes of the Storm</option>
+            </select><br>
+            Other:<br>
+            <input type="text" name="othergames"><br>
+             Describe your inquiry:<br>
+            <input id="messagebox" type="text" name="message"><br>
+        </fieldset>
+        <input type="submit" value="Send">
+       
+        <input type="reset" value="Reset">
+    </form>
+        
+</div>
+
+<script>
+
+</script>

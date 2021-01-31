@@ -1,0 +1,106 @@
+<header>
+    <div class="nav-container">
+        <img src ="assets/tabularasa.jpg" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a class='active-page' href="/">Home</a></li>
+                <li><a href="/info">Tabula Rasa Info</a></li>
+                <li><a href="/recruitment">Tabula Rasa Recruitment</a></li>
+                <li><a href="/contact">Tabula Rasa Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="slideshow">
+  <div class="pictures fade">
+    <a href="www.google.com"><img src="assets/mitrelogo.png" alt="My Workplace" style="width:100%"></a>
+    <div class="hover">
+        <div class="pictext"><a class="link" href="assets/files/IntroToMITRE.pdf" download>Learn more about my workplace</a></div>
+        </div>
+  </div>
+  
+  <div class="pictures fade">
+    <a href="https://github.com/PeytonFitzgerald"></a><img src="assets/github.png" alt="GitHub" style="width:100%"></a>
+    <div class="hover">
+        <div class="pictext"><a class="link" href="https://github.com/PeytonFitzgerald">Visit my GITHUB<br><span class="copyright">Image Source - GitHub</span><br></a></div>
+    </div>
+  </div>
+
+  <div class="pictures fade">
+    <img src ="assets/oasis.jpg" style="width:100%">
+    <div class="hover">
+        <div class="pictext"><a class="link" href="https://store.steampowered.com/app/903950/Last_Oasis/">Check out Last Oasis!<br> <span class="copyright">Image Source - https://www.artstation.com/artwork/VdLJY8</span></a></div>
+    </div>
+  </div>
+
+  <div class="pictures fade">
+    <img src ="assets/wow.jpg" style="width:100%">
+    <div class="hover">
+        <div class="pictext"><a class="link" href="https://worldofwarcraft.com/en-us/">Check out World of Warcraft!<br> <span class="copyright">Image Source -https://www.artstation.com/artwork/A9N18m</span></a></div> 
+     </div>
+  </div>
+
+  <div class="pictures fade">
+    <img src ="assets/valorant.jpg" style="width:100%">
+    <div class="hover">
+        <div class="pictext"><a class="link" href="https://beta.playvalorant.com/en-us/">Check out Valorant!<br><span class="copyright">Image Source - https://www.artstation.com/artwork/3oOZJJ</span></a></div>
+    </div>
+  </div>
+
+  
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<script>
+    var slideIndex = 1;
+    var timer = null;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    clearTimeout(timer);
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    clearTimeout(timer);
+    showSlides(slideIndex = n);
+    }
+
+
+
+    /* Slideshow  */
+    /* Major Assistance from the tutorials at the link below. Could not make it pretty without
+    its help - combined the two methods at the bottom ttps://www.w3schools.com/bootstrap/bootstrap_carousel.asp */ 
+    /* ------------ */
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("pictures");
+        var dots = document.getElementsByClassName("dot");
+        if (n==undefined){n = ++slideIndex}
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        timer = setTimeout(showSlides, 5000);
+    } 
+</script>
+

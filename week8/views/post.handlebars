@@ -1,0 +1,37 @@
+<h1>POST Request Received</h1>
+{{#if arrayForFirstTable.length}}
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each arrayForFirstTable}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.value}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+{{/if}}
+{{#if arrayForSecondTable.length}}
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each arrayForSecondTable}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.value}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+{{/if}}
